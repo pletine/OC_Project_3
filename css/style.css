@@ -43,13 +43,124 @@ td, th {
   padding: 0;
 }
 
+@font-face {
+  font-family: Shrikhand;
+  src: url("../../import/fonts/Shrikhand/Shrikhand-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("../../import/fonts/Roboto/Roboto-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Robot;
+  src: url("../../import/fonts/Roboto/Roboto-Bold.ttf") format("ttf");
+  font-weight: bold;
+}
 body {
-  background-color: black;
-  color: black;
+  background-color: #FFFFFF;
+}
+
+h2 {
+  font-family: Roboto;
+  font-weight: bold;
+  text-align: left;
+}
+
+p {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  padding: 2% 7%;
+}
+
+/** Header
+ * 
+ */
+header {
+  margin-bottom: 3%;
+  background-color: #F7F7F7;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+header img {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3px;
+  padding: 7% 30% 3% 30%;
+  min-width: 180px;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+header p:nth-child(2) {
+  background-color: #EAEAEA;
+  text-align: center;
+  padding: 3% 0;
 }
 
 h1 {
-  text-align: center;
+  font-family: Shrikhand, Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 26px;
+  padding: 7% 10% 2% 10%;
+}
+
+header p:last-child {
+  color: white;
+  background: linear-gradient(to left top, #9356DC, #FF79DA);
+  width: 50%;
+  margin: 1.5em auto;
+  padding: 0.8em 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+}
+
+/** Aside
+ *
+ */
+li {
+  border: 1px solid black;
+  background: rgb(216, 216, 216);
+  margin: 5%;
+  border-radius: 25px;
+}
+
+/** Main
+ * 
+ */
+figure {
+  border: 1px solid black;
+  border-radius: 25%;
+}
+figure img {
+  object-fit: cover;
+}
+
+figcaption {
+  position: relative;
+}
+figcaption i {
+  position: absolute;
+  right: 0;
+  margin: 1%;
+}
+
+/** Footer
+ * 
+ */
+footer {
+  background-color: rgb(95, 95, 95);
+  color: white;
+}
+
+/** Responsive
+ * 
+ */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: black;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

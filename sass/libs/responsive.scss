@@ -1,1 +1,6 @@
-$medium-up: "only screen and (min-width: 992px)";
+$max-width: 1400px!default;
+$medium-size-limit: 992px!default;
+$small-size-limit: 768px!default;
+
+$deskop-format: "only screen and (min-width: #{$medium-size-limit})";
+$tablette-format: "all and (min-width: #{$small-size-limit}) and (max-width: #{$medium-size-limit})";

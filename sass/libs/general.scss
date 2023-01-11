@@ -1,0 +1,23 @@
+$background-color: #FFFFFF!default;
+$primary-color: #9356DC!default;
+$secondary-color: #FF79DA!default;
+$thirdary-color: #99E2D0!default;
+
+@font-face {
+    font-family: Shrikhand;
+    src: url("../../import/fonts/Shrikhand/Shrikhand-Regular.ttf") 
+        format("ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../../import/fonts/Roboto/Roboto-Regular.ttf")
+        format("ttf");
+}
+
+@font-face {
+    font-family: Robot;
+    src: url("../../import/fonts/Roboto/Roboto-Bold.ttf")
+        format("ttf");
+    font-weight: bold;
+}
