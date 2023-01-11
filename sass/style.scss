@@ -1,6 +1,11 @@
 @import "libs/style_reset_mini.scss";
+@import "libs/responsive.scss";
 
 body {
     background-color: black;
-    color: white;
+    color: black;
+}
+
+h1{
+    text-align: center;
 }
