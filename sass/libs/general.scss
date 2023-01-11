@@ -16,8 +16,18 @@ $thirdary-color: #99E2D0!default;
 }
 
 @font-face {
-    font-family: Robot;
+    font-family: Roboto;
     src: url("../../import/fonts/Roboto/Roboto-Bold.ttf")
         format("ttf");
     font-weight: bold;
+}
+
+@for $i from 1 through 4 {
+    h#{$i} {
+        font-family: Shrikhand, Arial, Helvetica, sans-serif;
+    }
+}
+
+p, i, li{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }

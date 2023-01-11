@@ -7,12 +7,10 @@ body {
 }
 
 h2{
-    font-family: Roboto;
     font-weight: bold;
     text-align: left;
 }
-p{
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+p, li{
     padding: 2% 7%;
 }
 
@@ -42,7 +40,6 @@ header p:nth-child(2){
     padding: 3% 0;
 }
 h1 {
-    font-family: Shrikhand, Arial, Helvetica, sans-serif;
     font-weight: 900;
     font-size: 26px;
     padding: 7% 10% 2% 10%;
@@ -62,7 +59,7 @@ header p:last-child{
 /** Aside
  *
  */
-li{
+aside li{
     border: 1px solid black;
     background: rgb(216, 216, 216);
     margin: 5%;
@@ -72,22 +69,67 @@ li{
 /** Main
  * 
  */
-figure {
-    border: 1px solid black;
-    border-radius: 25%;
+main{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    background-color: #F7F7F7;
+    padding: 50px 0;
 
-    img{
-        object-fit: cover;
+    h2 {
+        margin-left: 20px;
+        font-size: 26px;
     }
 }
 
-figcaption{
+figure {
     position: relative;
+    border-radius: 10px;
+    align-self: center;
+    width: 90%;
+    height: 300px;
 
-    i{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+    img {
+        object-fit: cover;
+        height: 70%;
+        width: 100%;
+
+        border-radius: 10px 10px 0 0;
+    }
+
+    p:first-child {
+        font-weight: bold;
         position: absolute;
-        right: 0;
-        margin: 1%;
+        top: 3%;
+        right: 2%;
+        margin: 5px;
+        color: #008766;
+        background-color: #99E2D0;
+        z-index: 1;
+    }
+
+    figcaption{
+        position: relative;
+        padding: 2% 5%;
+        font-size: 18px;
+
+        h3 {
+            font-weight: 800;
+            margin: 2px 0;
+        }
+
+        p {
+            padding: 0;
+        }
+    
+        i{
+            position: absolute;
+            right: 5%;
+            top: 30%;
+            font-size: 180%;
+        }
     }
 }
 
@@ -95,8 +137,21 @@ figcaption{
  * 
  */
 footer{
-    background-color: rgb(95, 95, 95);
+    background-color: #353535;
     color: white;
+    margin-top: auto;
+    padding-bottom: 6%;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    margin: 3%;
+
+    i {
+        width: 20px;
+        padding-right: 30px;
+    }
 }
 
 /** Responsive
