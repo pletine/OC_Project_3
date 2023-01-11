@@ -59,11 +59,56 @@ header p:last-child{
 /** Aside
  *
  */
+aside {
+    padding: 50px 15px;
+
+    ol {
+        list-style-type: none;
+    }
+}
+aside h2 {
+    margin-left: 5px;
+    font-size: 26px;
+}
 aside li{
-    border: 1px solid black;
-    background: rgb(216, 216, 216);
+    background: #F7F7F7;
     margin: 5%;
-    border-radius: 25px;
+    border-radius: 15px;
+    padding: 20px;
+    padding-left: 40px;
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    counter-increment: step-counter;
+
+    i {
+        padding-right: 10%;
+        color: #7E7E7E;
+    }
+
+    &:hover{
+        background-color: #F5EDFF;
+
+        i {
+            color: $primary-color;
+        }
+    }
+
+    &::before {
+        content: counter(step-counter);
+    }
+
+    @for $i from 1 to 4 {
+        &:nth-of-type(#{$i})::before {
+            background-color: $primary-color;
+            border-radius: 50%;
+            
+            color: white;
+            padding: 5px 10px;
+
+            position: absolute;
+            left: 10px;
+        }
+    }
 }
 
 /** Main
