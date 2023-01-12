@@ -5,13 +5,22 @@
 body {
     background-color: $background-color;
 }
-
+h1 {
+    font-weight: 900;
+    font-size: 26px;
+    padding: 7% 10% 2% 10%;
+}
 h2{
     font-weight: bold;
     text-align: left;
 }
 p, li{
     padding: 2% 7%;
+}
+
+a{
+    text-decoration: none;
+    color: $text-color;
 }
 
 /** Header
@@ -39,22 +48,13 @@ header p:nth-child(2){
     text-align: center;
     padding: 3% 0;
 }
-h1 {
-    font-weight: 900;
-    font-size: 26px;
-    padding: 7% 10% 2% 10%;
-}
-header p:last-child{
-    color: white;
-    background: linear-gradient(to left top, $primary-color, $secondary-color);
-    
-    width: 50%;
-    margin: 1.5em auto;
+header p:last-child {
+    margin: 2em 0;
 
-    padding: 0.8em 0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 25px;
-}
+    a{
+        @extend %button;
+    }
+} 
 
 /** Aside
  *
@@ -72,23 +72,23 @@ aside h2 {
 }
 aside li{
     background: #F7F7F7;
-    margin: 5%;
+    margin: 2%;
     border-radius: 15px;
-    padding: 20px;
-    padding-left: 40px;
+    padding: 20px 0;
+    padding-left: 3%;
 
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    @extend %shadow;
     counter-increment: step-counter;
 
     i {
-        padding-right: 10%;
+        padding-right: 2%;
         color: #7E7E7E;
     }
 
-    &:hover{
+    &:hover{ /* Change la couleur lors du survol */
         background-color: #F5EDFF;
 
-        i {
+        i { /* L'icône change également de couleur */
             color: $primary-color;
         }
     }
@@ -105,8 +105,8 @@ aside li{
             color: white;
             padding: 5px 10px;
 
-            position: absolute;
-            left: 10px;
+            position: relative;
+            left: -6%;
         }
     }
 }
@@ -134,7 +134,7 @@ figure {
     width: 90%;
     height: 300px;
 
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    @extend %shadow;
 
     img {
         object-fit: cover;
@@ -160,6 +160,9 @@ figure {
         padding: 2% 5%;
         font-size: 18px;
 
+        background-color: green;
+        border: 2px dotted red;
+
         h3 {
             font-weight: 800;
             margin: 2px 0;
@@ -174,6 +177,11 @@ figure {
             right: 5%;
             top: 30%;
             font-size: 180%;
+            background-color: blue;
+
+            &:click {
+                color: blue;
+            }
         }
     }
 }
@@ -189,7 +197,6 @@ footer{
 }
 
 footer a{
-    text-decoration: none;
     color: white;
     margin: 3%;
 
