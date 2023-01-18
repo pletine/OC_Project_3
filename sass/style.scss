@@ -174,12 +174,14 @@ figure {
             right: 5%;
             top: 30%;
             font-size: 180%;
-            text-shadow: 0 0 5px #000;
+            text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+            1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
             color: $background-color;
 
             &:active {
                 color: $primary-color;
-                transition: 2s;
+                text-shadow: none;
+                transition: 1000ms;
             }
         }
     }
@@ -194,8 +196,10 @@ footer{
     margin-top: auto;
     padding-bottom: 6%;
 }
-footer path {
-    fill: white;
+footer img {
+    filter: invert(100%);
+    width: 150px;
+    margin: 40px 0 15px 60px;
 }
 footer a{
     color: white;
