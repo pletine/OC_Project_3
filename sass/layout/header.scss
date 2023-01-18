@@ -1,0 +1,29 @@
+header{
+    margin-bottom: 3%;
+    background-color: #F7F7F7;
+    padding-bottom: 1em;
+    text-align: center;
+}
+header img{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3px;
+    padding: 7% 30% 3% 30%;
+    min-width: 180px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header p:nth-child(2){
+    background-color: #EAEAEA;
+    text-align: center;
+    padding: 3% 0;
+}
+header p:last-child {
+    margin: 2em 0;
+
+    a {
+        @extend %button;
+    }
+}
