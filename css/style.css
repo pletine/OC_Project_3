@@ -42,7 +42,10 @@ table {
 
 td, th {
   padding: 0;
-} /* Déclaration des variables globales */
+}
+
+/* Créer les mixins pour les différentes tailles d'écrans */
+/* Déclaration des variables globales */
 /* Import des polices */
 @font-face {
   font-family: Shrikhand;
@@ -253,8 +256,6 @@ figure figcaption {
   position: relative;
   padding: 2% 5%;
   font-size: 18px;
-  background-color: green;
-  border: 2px dotted red;
 }
 figure figcaption h3 {
   font-weight: 800;
@@ -268,10 +269,12 @@ figure figcaption i {
   right: 5%;
   top: 30%;
   font-size: 180%;
-  background-color: blue;
+  text-shadow: 0 0 5px #000;
+  color: #FFFFFF;
 }
-figure figcaption i:click {
-  color: blue;
+figure figcaption i:active {
+  color: #9356DC;
+  transition: 2s;
 }
 
 /** Footer
@@ -282,6 +285,10 @@ footer {
   color: white;
   margin-top: auto;
   padding-bottom: 6%;
+}
+
+footer path {
+  fill: white;
 }
 
 footer a {

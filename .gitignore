@@ -4,3 +4,9 @@
 # Don't download the test stylesheet
 # -> Tests stylesheet not visible on production
 css/style_test.css
+
+# Don't commit the executable files
+exec/*
+
+# Don't add files specific to the project and VS Code
+.vscode/

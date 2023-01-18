@@ -4,3 +4,16 @@ $small-size-limit: 768px!default;
 
 $deskop-format: "only screen and (min-width: #{$medium-size-limit})";
 $tablette-format: "all and (min-width: #{$small-size-limit}) and (max-width: #{$medium-size-limit})";
+
+/* Créer les mixins pour les différentes tailles d'écrans */
+@mixin tablette-only {
+    @media #{$tablette-format} {
+        @content;
+    }
+}
+
+@mixin deskop-only {
+    @media #{$deskop-format} {
+        @content;
+    }
+}
