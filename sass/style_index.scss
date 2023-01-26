@@ -8,6 +8,15 @@
 @import "layout/header.scss";
 @import "layout/footer.scss";
 
+h2 {
+    font-weight: 900;
+    padding-left: 10px;
+}
+h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
 /** Aside
  *
  */
@@ -130,7 +139,7 @@ figure {
             1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
             color: $background-color;
 
-            &:active {
+            &:hover {
                 color: $primary-color;
                 text-shadow: none;
                 transition: 1000ms;

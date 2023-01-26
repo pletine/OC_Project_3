@@ -1,20 +1,20 @@
 /* Import des polices */
 @font-face {
     font-family: Shrikhand;
-    src: url("../../import/fonts/Shrikhand/Shrikhand-Regular.ttf") 
-        format("ttf");
+    src: url("../../import/fonts/Shrikhand/Shrikhand-Regular.ttf")
+    format("opentype");
 }
 
 @font-face {
     font-family: Roboto;
     src: url("../../import/fonts/Roboto/Roboto-Regular.ttf")
-        format("ttf");
+        format("opentype");
 }
 
 @font-face {
     font-family: Roboto;
-    src: url("../../import/fonts/Roboto/Roboto-Bold.ttf")
-        format("ttf");
+    src: url("../../../import/fonts/Roboto/Roboto-Bold.ttf")
+        format("opentype");
     font-weight: bold;
 }
 
@@ -29,11 +29,18 @@
 }
 
 %button {
+    @extend %shadow;
+
     color: white;
     background: linear-gradient(to left top, $primary-color, $secondary-color);
+
     margin: 1.5em auto;
     padding: 0.8em 1.5em;
     border-radius: 25px;
 
-    @extend %shadow;
+    min-width: 50%;
+    
+    &:hover {
+        font-weight: bold;
+    }
 }

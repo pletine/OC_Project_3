@@ -1,7 +1,11 @@
 /* Appliquer les polices sur les différents niveaux de texte */
-@for $i from 1 through 4 {
+h1 {
+    font-family: Shrikhand, Arial, Helvetica, sans-serif;
+}
+
+@for $i from 2 through 4 {
     h#{$i} {
-        font-family: Shrikhand, Arial, Helvetica, sans-serif;
+        font-family: Roboto, Arial, Helvetica, sans-serif;
     }
 }
 
@@ -19,7 +23,6 @@ h1 {
     padding: 7% 10% 2% 10%;
 }
 h2{
-    font-weight: bold;
     text-align: left;
 }
 p, li{
