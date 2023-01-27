@@ -48,9 +48,10 @@ h2 {
 }
 
 /* First transition with loader */
-$delay_loader: 3s;
+$delay_loader: 5s;
 $delay_transition: 1s;
 $delay_menu: $delay_loader + $delay_transition;
+$duration_animation: 5s;
 
 @keyframes disparition_loader {
     0% {
@@ -71,11 +72,14 @@ $delay_menu: $delay_loader + $delay_transition;
         width: 0;
         height: 0;
         visibility: hidden;
-        transform: translateY(2000px);
-
+        opacity: 0%;
+        transform: translateY(-20000px);
+    }
+    30% {
+        transform: translateY(200px);
         opacity: 0%;
     }
-    to {
+    100% {
         transform: translateY(0px);
         visibility: visible;
         opacity: 100%;
@@ -88,8 +92,9 @@ $delay_menu: $delay_loader + $delay_transition;
     z-index: 1;
     border-radius: 50px 50px 0 0;
     padding-bottom: 30px;
+    margin-bottom: 20px;
 
-    animation: disparition_loader 5s linear $delay_loader both;
+    animation: disparition_loader $duration_animation linear $delay_loader both;
 }
 
 /* Principal image of the restaurant */
@@ -106,7 +111,7 @@ main {
         border-radius: 50px 50px 0 0;
         padding-bottom: 30px;
 
-        animation: apparition_menu 5s ease-in-out 5s both;
+        animation: apparition_menu $duration_animation linear $delay_menu both;
     }
 }
 
