@@ -8,6 +8,8 @@
 @import "layout/header.scss";
 @import "layout/footer.scss";
 
+@import "utils/loader.scss";
+
 /* Header with return button */
 header {
     margin-bottom: 0;
@@ -45,6 +47,51 @@ h2 {
     }
 }
 
+/* First transition with loader */
+$delay_loader: 3s;
+$delay_transition: 1s;
+$delay_menu: $delay_loader + $delay_transition;
+
+@keyframes disparition_loader {
+    0% {
+        opacity: 100%;    
+    }
+    90% {
+        opacity: 0%;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes apparition_menu {
+    0% {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        transform: translateY(2000px);
+
+        opacity: 0%;
+    }
+    to {
+        transform: translateY(0px);
+        visibility: visible;
+        opacity: 100%;
+    }
+}
+
+#cooking {
+    background-color: #F7F7F7;
+    margin-top: -50px;
+    z-index: 1;
+    border-radius: 50px 50px 0 0;
+    padding-bottom: 30px;
+
+    animation: disparition_loader 5s linear $delay_loader both;
+}
+
 /* Principal image of the restaurant */
 main {
     img {
@@ -54,10 +101,12 @@ main {
     }
     article {
         background-color: #F7F7F7;
-        margin-top: -90px;
+        margin-top: -50px;
         z-index: 1;
         border-radius: 50px 50px 0 0;
         padding-bottom: 30px;
+
+        animation: apparition_menu 5s ease-in-out 5s both;
     }
 }
 
@@ -94,7 +143,7 @@ article > p {
 
     &:hover {
         cursor: pointer;
-        
+
         .texte {
             width: 70%;
             transition: 2s;
@@ -137,7 +186,7 @@ article > p {
         
         position: absolute;
         right: 5%;
-        bottom: 1%;
+        bottom: 5%;
         padding: 1%;
     }
 }
