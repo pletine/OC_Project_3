@@ -134,6 +134,7 @@ figure figcaption i {
   color: #FFFFFF;
 }
 figure figcaption i:hover {
+  cursor: pointer;
   color: #9356DC;
   text-shadow: none;
   transition: 1000ms;
