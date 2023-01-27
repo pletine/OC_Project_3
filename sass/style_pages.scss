@@ -8,6 +8,7 @@
 @import "layout/header.scss";
 @import "layout/footer.scss";
 
+/* Header with return button */
 header {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -17,23 +18,16 @@ header {
     }
 }
 
+/* Titles */
 h1 {
     position: relative;
     font-size: 2.2em;
     padding: 8% 5% 7% 5%;
 }
 h1 i {
-    position: absolute;
+    @extend %heart;
+    font-size: 100%;
     right: 12%;
-    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
-    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-    color: $background-color;
-
-    &:hover {
-        color: $primary-color;
-        text-shadow: none;
-        transition: 1000ms;
-    }
 }
 
 h2 {
@@ -51,6 +45,7 @@ h2 {
     }
 }
 
+/* Principal image of the restaurant */
 main {
     img {
         z-index: -1;
@@ -66,6 +61,7 @@ main {
     }
 }
 
+/* Button to order */
 article > p {
     margin: 2em auto 0 auto;
     text-align: center;
@@ -76,14 +72,35 @@ article > p {
     }
 }
 
+/* Cards of plates */
 .plat {
     @extend %shadow;
-    border-radius: 25px;
-    background-color: white;
     width: 90%;
+
+    border-radius: 15px;
     margin: 3% auto;
-    padding: 2% 5%;
+    overflow: hidden;
+    white-space: nowrap;
+
+    background-color: red;
+
+    &:hover {
+        .texte {
+            width: 70%;
+            transition: 2s;
+        }
+    }
+}
+
+.texte {
+    display: inline-block;
     position: relative;
+    background-color: white;
+
+    width: 100%;
+    height: 70px;
+    padding: 4% 5%;
+    margin: 0;
 
     h3 {
         font-weight: bold;
@@ -91,18 +108,35 @@ article > p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        margin-right: 10%;
+        margin-top: 2px;
     }
-    p {
+    h3 + p {
         padding: 0;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        margin-right: 18%;
     }
     p:last-child {
+        font-weight: bold;
+        
         position: absolute;
         right: 5%;
-        bottom: 12px;
+        bottom: 1%;
+        padding: 1%;
+    }
+}
+
+.check {
+    display: inline-block;
+    background-color: $thirdary-color;
+    text-align: center;
+    width: 30%;
+
+    i {
+        font-size: 1.5em;
         font-weight: bold;
-        margin: 0;
+        color: white;
     }
 }

@@ -8,6 +8,10 @@
 @import "layout/header.scss";
 @import "layout/footer.scss";
 
+
+h1 {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
 h2 {
     font-weight: 900;
     padding-left: 10px;
@@ -131,19 +135,7 @@ figure {
         }
         
         i{
-            position: absolute;
-            right: 5%;
-            top: 30%;
-            font-size: 180%;
-            text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
-            1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-            color: $background-color;
-
-            &:hover {
-                color: $primary-color;
-                text-shadow: none;
-                transition: 1000ms;
-            }
+            @extend %heart;
         }
     }
 }

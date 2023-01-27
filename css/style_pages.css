@@ -125,6 +125,20 @@ article > p a:hover, header p:last-child a:hover {
   font-weight: bold;
 }
 
+h1 i {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  font-size: 180%;
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+  color: #FFFFFF;
+}
+h1 i:hover {
+  color: #9356DC;
+  text-shadow: none;
+  transition: 1000ms;
+}
+
 header {
   margin-bottom: 3%;
   background-color: #F7F7F7;
@@ -180,6 +194,7 @@ footer a i {
   padding-right: 30px;
 }
 
+/* Header with return button */
 header {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -188,6 +203,7 @@ header img {
   margin-bottom: 0;
 }
 
+/* Titles */
 h1 {
   position: relative;
   font-size: 2.2em;
@@ -195,15 +211,8 @@ h1 {
 }
 
 h1 i {
-  position: absolute;
+  font-size: 100%;
   right: 12%;
-  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-  color: #FFFFFF;
-}
-h1 i:hover {
-  color: #9356DC;
-  text-shadow: none;
-  transition: 1000ms;
 }
 
 h2 {
@@ -220,6 +229,7 @@ h2::after {
   margin-top: 8px;
 }
 
+/* Principal image of the restaurant */
 main img {
   z-index: -1;
   overflow: hidden;
@@ -233,6 +243,7 @@ main article {
   padding-bottom: 30px;
 }
 
+/* Button to order */
 article > p {
   margin: 2em auto 0 auto;
   text-align: center;
@@ -241,32 +252,62 @@ article > p a {
   padding: 0.8em 2.5em;
 }
 
+/* Cards of plates */
 .plat {
-  border-radius: 25px;
-  background-color: white;
   width: 90%;
+  border-radius: 15px;
   margin: 3% auto;
-  padding: 2% 5%;
-  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: red;
 }
-.plat h3 {
+.plat:hover .texte {
+  width: 70%;
+  transition: 2s;
+}
+
+.texte {
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  padding: 4% 5%;
+  margin: 0;
+}
+.texte h3 {
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-right: 10%;
+  margin-top: 2px;
 }
-.plat p {
+.texte h3 + p {
   padding: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-right: 18%;
 }
-.plat p:last-child {
+.texte p:last-child {
+  font-weight: bold;
   position: absolute;
   right: 5%;
-  bottom: 12px;
+  bottom: 1%;
+  padding: 1%;
+}
+
+.check {
+  display: inline-block;
+  background-color: #99E2D0;
+  text-align: center;
+  width: 30%;
+}
+.check i {
+  font-size: 1.5em;
   font-weight: bold;
-  margin: 0;
+  color: white;
 }
 
 /*# sourceMappingURL=style_pages.css.map */

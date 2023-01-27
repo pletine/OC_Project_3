@@ -39,8 +39,25 @@
     border-radius: 25px;
 
     min-width: 50%;
-    
+
     &:hover {
         font-weight: bold;
+    }
+}
+
+%heart {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    font-size: 180%;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+
+    color: $background-color;
+
+    &:hover {
+        color: $primary-color;
+        text-shadow: none;
+        transition: 1000ms;
     }
 }

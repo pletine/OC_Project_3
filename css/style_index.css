@@ -125,6 +125,20 @@ header p:last-child a:hover {
   font-weight: bold;
 }
 
+figure figcaption i {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  font-size: 180%;
+  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+  color: #FFFFFF;
+}
+figure figcaption i:hover {
+  color: #9356DC;
+  text-shadow: none;
+  transition: 1000ms;
+}
+
 header {
   margin-bottom: 3%;
   background-color: #F7F7F7;
@@ -178,6 +192,10 @@ footer a {
 footer a i {
   width: 20px;
   padding-right: 30px;
+}
+
+h1 {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -301,20 +319,6 @@ figure figcaption h3 {
 figure figcaption p {
   padding: 0;
 }
-figure figcaption i {
-  position: absolute;
-  right: 5%;
-  top: 30%;
-  font-size: 180%;
-  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-  color: #FFFFFF;
-}
-figure figcaption i:hover {
-  color: #9356DC;
-  text-shadow: none;
-  transition: 1000ms;
-}
-
 /** Responsive
  * 
  */
