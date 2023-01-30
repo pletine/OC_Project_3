@@ -98,8 +98,16 @@ figure {
     align-self: center;
     width: 90%;
     height: 300px;
+    background-color: #F7F7F7;
 
     @extend %shadow;
+    &:hover {
+        background-color: $background-color;
+
+        i {
+            color: $background-color;
+        }
+    }
 
     img {
         object-fit: cover;
@@ -140,12 +148,11 @@ figure {
     }
 }
 
-
 /** Responsive
  * 
  */
 @media #{$deskop-format} {
     body {
-        background-color: black;
+        background-color: yellow;
     }
 }

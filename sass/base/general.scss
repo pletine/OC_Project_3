@@ -45,6 +45,21 @@
     }
 }
 
+@keyframes heart_beat {
+	30% {
+		color: white;
+		transform: scale(1.5);
+	}
+	40% {
+        text-shadow: none;
+	}
+	100% {
+		color: $primary-color;
+        text-shadow: none;
+		transform: scale(1);
+	}
+}
+
 %heart {
     position: absolute;
     right: 5%;
@@ -52,14 +67,11 @@
     font-size: 180%;
     text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
     1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-
-    color: $background-color;
+    
+    color: $background-color-darker;
 
     &:hover {
         cursor: pointer;
-        
-        color: $primary-color;
-        text-shadow: none;
-        transition: 1000ms;
+        animation: heart_beat 2s ease-in-out both;
     }
 }

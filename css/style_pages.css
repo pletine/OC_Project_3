@@ -125,19 +125,31 @@ article > p a:hover, header p:last-child a:hover {
   font-weight: bold;
 }
 
+@keyframes heart_beat {
+  30% {
+    color: white;
+    transform: scale(1.5);
+  }
+  40% {
+    text-shadow: none;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: none;
+    transform: scale(1);
+  }
+}
 h1 i {
   position: absolute;
   right: 5%;
   top: 30%;
   font-size: 180%;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-  color: #FFFFFF;
+  color: #F7F7F7;
 }
 h1 i:hover {
   cursor: pointer;
-  color: #9356DC;
-  text-shadow: none;
-  transition: 1000ms;
+  animation: heart_beat 2s ease-in-out both;
 }
 
 header {
@@ -454,7 +466,6 @@ h2::after {
     opacity: 0%;
   }
   100% {
-    width: 0;
     height: 0;
     visibility: hidden;
   }
@@ -544,7 +555,7 @@ article > p a {
   position: relative;
   width: 100%;
   height: 70px;
-  padding: 4% 5%;
+  padding: 20px 5%;
   margin: 0;
   transition: 1s;
 }

@@ -125,19 +125,31 @@ header p:last-child a:hover {
   font-weight: bold;
 }
 
+@keyframes heart_beat {
+  30% {
+    color: white;
+    transform: scale(1.5);
+  }
+  40% {
+    text-shadow: none;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: none;
+    transform: scale(1);
+  }
+}
 figure figcaption i {
   position: absolute;
   right: 5%;
   top: 30%;
   font-size: 180%;
   text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
-  color: #FFFFFF;
+  color: #F7F7F7;
 }
 figure figcaption i:hover {
   cursor: pointer;
-  color: #9356DC;
-  text-shadow: none;
-  transition: 1000ms;
+  animation: heart_beat 2s ease-in-out both;
 }
 
 header {
@@ -291,6 +303,13 @@ figure {
   align-self: center;
   width: 90%;
   height: 300px;
+  background-color: #F7F7F7;
+}
+figure:hover {
+  background-color: #FFFFFF;
+}
+figure:hover i {
+  color: #FFFFFF;
 }
 figure img {
   object-fit: cover;
@@ -325,7 +344,7 @@ figure figcaption p {
  */
 @media only screen and (min-width: 992px) {
   body {
-    background-color: black;
+    background-color: yellow;
   }
 }
 
