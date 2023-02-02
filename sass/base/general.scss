@@ -54,9 +54,11 @@
         text-shadow: none;
 	}
 	100% {
-		color: $primary-color;
         text-shadow: none;
 		transform: scale(1);
+        background: -webkit-linear-gradient($primary-color, $secondary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 	}
 }
 
@@ -69,7 +71,7 @@
     1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
     
     color: $background-color-darker;
-
+    
     &:hover {
         cursor: pointer;
         animation: heart_beat 2s ease-in-out both;

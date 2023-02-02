@@ -134,9 +134,11 @@ article > p a:hover, header p:last-child a:hover {
     text-shadow: none;
   }
   100% {
-    color: #9356DC;
     text-shadow: none;
     transform: scale(1);
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 h1 i {
