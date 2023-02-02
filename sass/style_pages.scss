@@ -1,24 +1,4 @@
-@import "libs/style_reset_mini.scss";
-@import "libs/responsive.scss";
-
-@import "utils/variables.scss";
-@import "base/base.scss";
-@import "base/general.scss";
-
-@import "layout/header.scss";
-@import "layout/footer.scss";
-
-@import "utils/loader.scss";
-
-/* Header with return button */
-header {
-    margin-bottom: 0;
-    padding-bottom: 0;
-
-    img {
-        margin-bottom: 0;
-    }
-}
+@import "all_imports.scss";
 
 /* Titles */
 h1 {
@@ -102,6 +82,7 @@ main {
         z-index: -1;
         overflow: hidden;
         position: relative;
+        margin-top: -5px;
     }
     article {
         background-color: #F7F7F7;

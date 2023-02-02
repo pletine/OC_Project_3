@@ -1,23 +1,31 @@
-@import "libs/style_reset_mini.scss";
-@import "libs/responsive.scss";
+@import "all_imports.scss";
 
-@import "utils/variables.scss";
-@import "base/base.scss";
-@import "base/general.scss";
+/* Première section */
+.explications {
+    margin-bottom: 3%;
+    background-color: #F7F7F7;
+    padding-bottom: 1em;
+    text-align: center;
+    position: relative;
 
-@import "layout/header.scss";
-@import "layout/footer.scss";
+    p:first-child{
+        background-color: #EAEAEA;
+        text-align: center;
+        padding: 3% 0;
+        margin-bottom: 40px;
+    }
 
-h1 {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
-}
-h2 {
-    font-weight: 900;
-    padding-left: 10px;
-}
-h3 {
-    font-weight: bold;
-    font-size: 20px;
+    p:nth-child(2) {
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    p:last-child {
+        margin: 2em 0;
+        a {
+            @extend %button;
+        }
+    }
 }
 
 /** Aside
@@ -29,48 +37,50 @@ aside {
     ol {
         list-style-type: none;
     }
-}
-aside h2 {
-    margin-left: 5px;
-    font-size: 26px;
-}
-aside li{
-    background: #F7F7F7;
-    margin: 2%;
-    border-radius: 15px;
-    padding: 20px 0;
-    padding-left: 3%;
 
-    @extend %shadow;
-    counter-increment: step-counter;
-
-    i {
-        padding-right: 2%;
-        color: #7E7E7E;
+    h2 {
+        margin-left: 5px;
+        font-size: 26px;
     }
 
-    &:hover{ /* Change la couleur lors du survol */
-        background-color: #F5EDFF;
-
-        i { /* L'icône change également de couleur */
-            color: $primary-color;
+    li{
+        background: #F7F7F7;
+        margin: 5%;
+        border-radius: 15px;
+        padding: 20px 0;
+        padding-left: 3%;
+    
+        @extend %shadow;
+        counter-increment: step-counter;
+    
+        i {
+            padding-right: 2%;
+            color: #7E7E7E;
         }
-    }
-
-    &::before {
-        content: counter(step-counter);
-    }
-
-    @for $i from 1 to 4 {
-        &:nth-of-type(#{$i})::before {
-            background-color: $primary-color;
-            border-radius: 50%;
-            
-            color: white;
-            padding: 5px 10px;
-
-            position: relative;
-            left: -6%;
+    
+        &:hover{ /* Change la couleur lors du survol */
+            background-color: #F5EDFF;
+    
+            i { /* L'icône change également de couleur */
+                color: $primary-color;
+            }
+        }
+    
+        &::before {
+            content: counter(step-counter);
+        }
+    
+        @for $i from 1 to 4 {
+            &:nth-of-type(#{$i})::before {
+                background-color: $primary-color;
+                border-radius: 50%;
+                
+                color: white;
+                padding: 5px 10px;
+    
+                position: relative;
+                left: -6%;
+            }
         }
     }
 }
@@ -81,7 +91,7 @@ aside li{
 main{
     display: flex;
     flex-flow: column wrap;
-    gap: 20px;
+    gap: 10px;
     background-color: #F7F7F7;
     padding: 50px 0;
 
@@ -150,7 +160,7 @@ figure {
 /** Responsive
  * 
  */
-@media #{$deskop-format} {
+ @include deskop-only {
     body {
         background-color: yellow;
     }

@@ -1,0 +1,61 @@
+/* Créer des extensions pour les ombres et l'apparence des boutons */
+%shadow {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    
+    &:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+}
+
+/* Forme et comportement des boutons */
+%button {
+    @extend %shadow;
+
+    color: white;
+    background: linear-gradient(to left top, $primary-color, $secondary-color);
+
+    margin: 1.5em auto;
+    padding: 0.8em 1.5em;
+    border-radius: 25px;
+
+    min-width: 50%;
+
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+/* Forme et comportement des coeurs de like */
+@keyframes heart_beat {
+	30% {
+		color: white;
+		transform: scale(1.5);
+	}
+	40% {
+        text-shadow: none;
+	}
+	100% {
+        text-shadow: none;
+		transform: scale(1);
+        background: -webkit-linear-gradient($primary-color, $secondary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+	}
+}
+
+%heart {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    font-size: 180%;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+    1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+    
+    color: $background-color-darker;
+    
+    &:hover {
+        cursor: pointer;
+        animation: heart_beat 2s ease-in-out both;
+    }
+}
