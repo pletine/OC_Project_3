@@ -245,7 +245,7 @@ h1 i:hover {
   bottom: 25%;
   right: 10%;
   height: 50%;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   background-color: transparent;
   transform-origin: 15% 60%;
   animation: flip 3s ease-in-out infinite;

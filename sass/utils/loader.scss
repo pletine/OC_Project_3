@@ -25,7 +25,7 @@ $dur_disp_loader: 2s;
     bottom: 25%;
     right: 10%;
     height: 50%;
-    aspect-ratio: 1;
+    aspect-ratio: 1 / 1;
     background-color: transparent;
     transform-origin: 15% 60%;
     animation: flip #{$anim_time}s ease-in-out infinite;
