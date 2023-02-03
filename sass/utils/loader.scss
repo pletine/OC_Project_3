@@ -33,21 +33,21 @@ $dur_disp_loader: 2s;
     font-size: 15px;
 
     /* Adapt the position of the loader */
-    @media #{$loader-transition} { // 425px -> 768px
+    @include media(phone-landscape) { // 425px -> 768px
         right: 5vw !important;
         bottom: 30% !important;
         height: 30% !important;
         font-size: 20px !important;
     }
 
-    @include tablette-only { // 768px -> 992px
+    @include media(tablet) { // 768px -> 992px
         right: 10vw !important;
         bottom: 10% !important;
         height: 50% !important;
         font-size: 30px !important;
     }
 
-    @include deskop-only { // 992px -> 1400px
+    @include media(deskop) { // 992px -> 1400px
         right: 20vw !important;
         bottom: 5% !important;
         height: 60% !important;

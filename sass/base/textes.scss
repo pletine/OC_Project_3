@@ -67,8 +67,9 @@ a:active{
 }
 
 /* Format de texte pour deskop */
-@include deskop-only {
+@include media(deskop, tablet) {
     h1 {
         font-weight: 900;
+        padding: 4% 5%;
     }
 }

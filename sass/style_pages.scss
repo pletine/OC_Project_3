@@ -71,6 +71,7 @@ article > p:last-child {
     @extend %shadow;
 
     width: 90%;
+    max-width: 420px;
     height: 80px;
     background-color: $background-color-darker;
 
@@ -160,6 +161,29 @@ article > p:last-child {
                 @include apparition($num_apparition);
                 $num_apparition: $num_apparition + 1;
             }
+        }
+    }
+}
+
+/** Responsive
+ * 
+ */
+@include media(deskop, tablet) {
+    section {
+        display: flex;
+        flex-flow: row wrap !important;
+        margin: 0 2%;
+        gap: 2%;
+
+        h2 {
+            width: 100%;
+        }
+
+        .plat {
+            max-width: 420px !important;
+            min-width: 315px !important;
+            margin: 1% auto;
+            flex: 1 1 0;
         }
     }
 }

@@ -45,6 +45,14 @@ td, th {
 }
 
 /* Créer les mixins pour les différentes tailles d'écrans */
+/* Mixin to use all the format */
+/***
+ * List of formats :
+ * - phone
+ * - phone-landscape
+ * - tablet
+ * - deskop
+ */
 /* Définition des couleurs */ /* Import des polices */
 @font-face {
   font-family: Shrikhand;
@@ -117,6 +125,13 @@ a:active {
 @media only screen and (min-width: 992px) {
   h1 {
     font-weight: 900;
+    padding: 4% 5%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 992px) {
+  h1 {
+    font-weight: 900;
+    padding: 4% 5%;
   }
 }
 body {
@@ -237,7 +252,7 @@ figure figcaption i:hover {
   width: 100%;
   height: 100%;
   background-color: #F7F7F7;
-  animation: disparition_loader 2s linear 0s both;
+  animation: disparition_loader 2s linear 5s both;
 }
 #loader #area {
   position: absolute;

@@ -161,7 +161,7 @@ figure {
 /** Responsive
  * 
  */
-@include deskop-only {
+@include media(deskop) {
     main {
         flex-flow: row wrap;
         padding: 3%;
@@ -209,7 +209,7 @@ figure {
     }
 }
 
-@include tablette-only {
+@include media(tablet) {
     main {
         flex-flow: row wrap;
         padding: 3%;
