@@ -59,3 +59,22 @@
         animation: heart_beat 2s ease-in-out both;
     }
 }
+
+/* Animation d'apparition des menus et restaurants */
+$dur_apparition: 1s;
+
+@keyframes apparition_elements {
+    0% {
+        opacity: 0%;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@mixin apparition($num) {
+    $delay: ($num - 1) * 500ms + $delay_loader;
+    animation: apparition_elements $dur_apparition $delay ease-in-out both;
+}

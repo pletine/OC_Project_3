@@ -4,6 +4,8 @@
 h1 {
     position: relative;
     font-weight: 400;
+    @include apparition(1);
+
     i{
         @extend %heart;
         font-size: 80%;
@@ -47,7 +49,8 @@ main {
 article > p:last-child {
     margin: 3em auto 1em auto;
     text-align: center;
-    
+    @include apparition(14);
+
     a {
         @extend %button;
         padding: 0.8em 2.5em;
@@ -66,6 +69,7 @@ article > p:last-child {
 
 .plat {
     @extend %shadow;
+
     width: 90%;
     height: 80px;
     background-color: $background-color-darker;
@@ -140,5 +144,22 @@ article > p:last-child {
         color: white;
 
         margin: 30px;
+    }
+}
+
+/* Loop to calculate the apparition of each element */
+@for $i from 2 through 4 {
+    $num_apparition: 4 * ($i - 2) + 2;
+    section:nth-child(#{$i}) {
+        & > h2 {
+            @include apparition($num_apparition);
+            $num_apparition: $num_apparition + 1;
+        }
+        @for $j from 2 through 4 {
+            & > div:nth-child(#{$j}) {
+                @include apparition($num_apparition);
+                $num_apparition: $num_apparition + 1;
+            }
+        }
     }
 }
