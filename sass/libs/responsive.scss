@@ -1,9 +1,11 @@
 $max-width: 1400px!default;
 $medium-size-limit: 992px!default;
 $small-size-limit: 768px!default;
+$really-small-size-limit: 425px!default;
 
 $deskop-format: "only screen and (min-width: #{$medium-size-limit})";
 $tablette-format: "all and (min-width: #{$small-size-limit}) and (max-width: #{$medium-size-limit})";
+$loader-transition: "all and (min-width: #{$really-small-size-limit}) and (max-width: #{$small-size-limit})";
 
 /* Créer les mixins pour les différentes tailles d'écrans */
 @mixin tablette-only {
