@@ -464,6 +464,9 @@ main img {
   overflow: hidden;
   position: relative;
   margin-top: -5px;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
 }
 main article {
   background-color: #F7F7F7;

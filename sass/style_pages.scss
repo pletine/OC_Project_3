@@ -35,6 +35,9 @@ main {
         overflow: hidden;
         position: relative;
         margin-top: -5px;
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
     }
     article {
         background-color: #F7F7F7;
