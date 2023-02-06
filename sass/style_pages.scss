@@ -150,13 +150,13 @@ article > p:last-child {
 
 /* Loop to calculate the apparition of each element */
 @for $i from 2 through 4 {
-    $num_apparition: 4 * ($i - 2) + 2;
+    $num_apparition: 5 * ($i - 2) + 2;
     section:nth-child(#{$i}) {
         & > h2 {
             @include apparition($num_apparition);
             $num_apparition: $num_apparition + 1;
         }
-        @for $j from 2 through 4 {
+        @for $j from 2 through 5 {
             & > div:nth-child(#{$j}) {
                 @include apparition($num_apparition);
                 $num_apparition: $num_apparition + 1;
