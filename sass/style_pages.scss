@@ -1,8 +1,5 @@
 @import "all_imports.scss";
 
-/* Specific Header in pages */
-
-
 /* Titles */
 h1 {
     position: relative;
@@ -174,7 +171,7 @@ article > p:last-child {
 /** Responsive
  * 
  */
-@include media(deskop, tablet) {
+@include media(deskop) {
     section {
         display: flex;
         flex-flow: row wrap !important;
@@ -187,7 +184,7 @@ article > p:last-child {
 
         .plat {
             max-width: 420px !important;
-            min-width: 315px !important;
+            min-width: 200px !important;
             margin: 1% auto;
             flex: 1 1 0;
         }

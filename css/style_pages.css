@@ -126,20 +126,41 @@ body {
   margin: auto;
 }
 
-header img {
-  width: 100%;
-  margin: 0 auto;
-  padding: 3% 30%;
-  padding-top: 6%;
-  min-width: 180px;
-  height: auto;
+header {
+  position: relative;
+  text-align: center;
+  background-color: #FFFFFF;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 1;
 }
-header a {
-  font-size: 8vw;
+header img {
+  max-width: 70%;
+  height: auto;
+  margin: 0 auto;
+  padding: 6% 10% 3% 10%;
+}
+@media only screen and (min-width: 992px) {
+  header img {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+header i {
   position: absolute;
-  left: 5%;
-  top: 4vw;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7%;
+  font-size: 8vw;
+}
+@media all and (min-width: 768px) and (max-width: 992px) {
+  header i {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  header i {
+    font-size: 50px;
+  }
 }
 
 footer {
@@ -264,7 +285,7 @@ h1 i:hover {
   #loader #area {
     right: 10vw !important;
     bottom: 10% !important;
-    height: 50% !important;
+    height: 40% !important;
     font-size: 30px !important;
   }
 }
@@ -419,7 +440,6 @@ h1 i:hover {
     visibility: hidden;
   }
 }
-/* Specific Header in pages */
 /* Titles */
 h1 {
   position: relative;
@@ -615,24 +635,7 @@ section:nth-child(4) > div:nth-child(5) {
   }
   section .plat {
     max-width: 420px !important;
-    min-width: 315px !important;
-    margin: 1% auto;
-    flex: 1 1 0;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 992px) {
-  section {
-    display: flex;
-    flex-flow: row wrap !important;
-    margin: 0 2%;
-    gap: 2%;
-  }
-  section h2 {
-    width: 100%;
-  }
-  section .plat {
-    max-width: 420px !important;
-    min-width: 315px !important;
+    min-width: 200px !important;
     margin: 1% auto;
     flex: 1 1 0;
   }

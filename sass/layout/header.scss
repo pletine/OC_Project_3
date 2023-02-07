@@ -1,18 +1,31 @@
 header{
+    position: relative;
+    text-align: center;
+    background-color: $background-color;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1;
+
     img{
-        width: 100%;
-        margin: 0 auto;
-        padding: 3% 30%;
-        padding-top: 6%;
-        min-width: 180px;
+        max-width: 70%;
         height: auto;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin: 0 auto;
+        padding: 6% 10% 3% 10%;
+
+        @include media(deskop) { // > 992px
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
     }
 
-    a {
-        font-size: 8vw;
+    i {
         position: absolute;
-        left: 5%;
-        top: 4vw;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 7%;
+        font-size: 8vw;
+
+        @include media(tablet, deskop) { // > 768px
+            font-size: 50px;
+        }
     }
 }
