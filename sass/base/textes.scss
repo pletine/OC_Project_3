@@ -1,33 +1,16 @@
-/* Import des polices */
-@font-face {
-    font-family: Shrikhand;
-    src: url("../../import/fonts/Shrikhand/Shrikhand-Regular.ttf");
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url("../../import/fonts/Roboto/Roboto-Regular.ttf");
-}
-
-@font-face {
-    font-family: Roboto;
-    src: url("../../../import/fonts/Roboto/Roboto-Bold.ttf");
-    font-weight: bold;
-}
-
 /* Appliquer les polices sur les différents niveaux de texte */
 h1 {
-    font-family: Shrikhand, Arial, Helvetica, sans-serif;
+    font-family: 'Shrikhand', cursive;
 }
 
 @for $i from 2 through 4 {
     h#{$i} {
-        font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 }
 
 p, i, li, a{
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Color and size for generic parts */

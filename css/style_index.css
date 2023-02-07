@@ -53,39 +53,25 @@ td, th {
  * - tablet
  * - deskop
  */
-/* Définition des couleurs */ /* Import des polices */
-@font-face {
-  font-family: Shrikhand;
-  src: url("../../import/fonts/Shrikhand/Shrikhand-Regular.ttf");
-}
-@font-face {
-  font-family: Roboto;
-  src: url("../../import/fonts/Roboto/Roboto-Regular.ttf");
-}
-@font-face {
-  font-family: Roboto;
-  src: url("../../../import/fonts/Roboto/Roboto-Bold.ttf");
-  font-weight: bold;
-}
-/* Appliquer les polices sur les différents niveaux de texte */
+/* Définition des couleurs */ /* Appliquer les polices sur les différents niveaux de texte */
 h1 {
-  font-family: Shrikhand, Arial, Helvetica, sans-serif;
+  font-family: "Shrikhand", cursive;
 }
 
 h2 {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h3 {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h4 {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 p, i, li, a {
-  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Color and size for generic parts */
