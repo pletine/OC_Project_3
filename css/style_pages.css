@@ -261,7 +261,7 @@ h1 i:hover {
   width: 100%;
   height: 100%;
   background-color: #F7F7F7;
-  animation: disparition_loader 2s linear 30s both;
+  animation: disparition_loader 2s linear 3s both;
 }
 #loader #area {
   position: absolute;
@@ -441,7 +441,7 @@ h1 i:hover {
 h1 {
   position: relative;
   font-weight: 400;
-  animation: apparition_elements 1s 30000ms ease-in-out both;
+  animation: apparition_elements 1s 3000ms ease-in-out both;
 }
 h1 i {
   font-size: 80%;
@@ -484,7 +484,7 @@ main article {
 article > p:last-child {
   margin: 3em auto 1em auto;
   text-align: center;
-  animation: apparition_elements 1s 36500ms ease-in-out both;
+  animation: apparition_elements 1s 9500ms ease-in-out both;
 }
 article > p:last-child a {
   padding: 0.8em 2.5em;
@@ -570,51 +570,51 @@ article > p:last-child a {
 
 /* Loop to calculate the apparition of each element */
 section:nth-child(2) > h2 {
-  animation: apparition_elements 1s 30500ms ease-in-out both;
+  animation: apparition_elements 1s 3500ms ease-in-out both;
 }
 section:nth-child(2) > div:nth-child(2) {
-  animation: apparition_elements 1s 31000ms ease-in-out both;
+  animation: apparition_elements 1s 4000ms ease-in-out both;
 }
 section:nth-child(2) > div:nth-child(3) {
-  animation: apparition_elements 1s 31500ms ease-in-out both;
+  animation: apparition_elements 1s 4500ms ease-in-out both;
 }
 section:nth-child(2) > div:nth-child(4) {
-  animation: apparition_elements 1s 32000ms ease-in-out both;
+  animation: apparition_elements 1s 5000ms ease-in-out both;
 }
 section:nth-child(2) > div:nth-child(5) {
-  animation: apparition_elements 1s 32500ms ease-in-out both;
+  animation: apparition_elements 1s 5500ms ease-in-out both;
 }
 
 section:nth-child(3) > h2 {
-  animation: apparition_elements 1s 33000ms ease-in-out both;
+  animation: apparition_elements 1s 6000ms ease-in-out both;
 }
 section:nth-child(3) > div:nth-child(2) {
-  animation: apparition_elements 1s 33500ms ease-in-out both;
+  animation: apparition_elements 1s 6500ms ease-in-out both;
 }
 section:nth-child(3) > div:nth-child(3) {
-  animation: apparition_elements 1s 34000ms ease-in-out both;
+  animation: apparition_elements 1s 7000ms ease-in-out both;
 }
 section:nth-child(3) > div:nth-child(4) {
-  animation: apparition_elements 1s 34500ms ease-in-out both;
+  animation: apparition_elements 1s 7500ms ease-in-out both;
 }
 section:nth-child(3) > div:nth-child(5) {
-  animation: apparition_elements 1s 35000ms ease-in-out both;
+  animation: apparition_elements 1s 8000ms ease-in-out both;
 }
 
 section:nth-child(4) > h2 {
-  animation: apparition_elements 1s 35500ms ease-in-out both;
+  animation: apparition_elements 1s 8500ms ease-in-out both;
 }
 section:nth-child(4) > div:nth-child(2) {
-  animation: apparition_elements 1s 36000ms ease-in-out both;
+  animation: apparition_elements 1s 9000ms ease-in-out both;
 }
 section:nth-child(4) > div:nth-child(3) {
-  animation: apparition_elements 1s 36500ms ease-in-out both;
+  animation: apparition_elements 1s 9500ms ease-in-out both;
 }
 section:nth-child(4) > div:nth-child(4) {
-  animation: apparition_elements 1s 37000ms ease-in-out both;
+  animation: apparition_elements 1s 10000ms ease-in-out both;
 }
 section:nth-child(4) > div:nth-child(5) {
-  animation: apparition_elements 1s 37500ms ease-in-out both;
+  animation: apparition_elements 1s 10500ms ease-in-out both;
 }
 
 /** Responsive
