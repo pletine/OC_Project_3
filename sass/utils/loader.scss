@@ -27,31 +27,26 @@ $dur_disp_loader: 2s;
     transform-origin: 15% 60%;
     animation: flip #{$anim_time}s ease-in-out infinite;
 
-    right: 0%;
+    left: 41%;
     bottom: 40%;
     height: 25%;
-    font-size: 15px;
+    font-size: 4vw;
 
     /* Adapt the position of the loader */
     @include media(phone-landscape) { // 425px -> 768px
-        right: 5vw !important;
         bottom: 30% !important;
         height: 30% !important;
-        font-size: 20px !important;
     }
 
     @include media(tablet) { // 768px -> 992px
-        right: 10vw !important;
         bottom: 10% !important;
         height: 40% !important;
-        font-size: 30px !important;
     }
 
     @include media(deskop) { // 992px -> 1400px
-        right: 20vw !important;
         bottom: 5% !important;
         height: 60% !important;
-        font-size: 30px !important;
+        font-size: 40px !important;
     }
 
     #sides {
